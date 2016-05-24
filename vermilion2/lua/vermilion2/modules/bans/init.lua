@@ -27,21 +27,24 @@ MODULE.Permissions = {
 	"ban_user",
 	"unban_user",
 	"kick_user",
-	"manage_bans"
+	"manage_bans",
+	"manage_globalbans"
 }
 MODULE.NetworkStrings = {
 	"GetBanRecords",
 	"BanPlayer",
 	"KickPlayer",
 	"UnbanPlayer",
-	"UpdateBanReason"
+	"UpdateBanReason",
+	"BanSQLConnector"
 }
 MODULE.DefaultPermissions = {
 	{ Name = "admin", Permissions = {
 			"ban_user",
 			"unban_user",
 			"kick_user",
-			"manage_bans"
+			"manage_bans",
+			"manage_globalbans"
 		}
 	}
 }
