@@ -33,6 +33,9 @@ if(time < 63604720800) then
 	print("[Vermilion2] CRITICAL WARNING: You are running an old version of GMod that is NOT supported and has NETWORKING ERRORS!")
 	print("[Vermilion2] If something goes wrong and you do not update to the latest version, I will not help you. Ever.")
 end
+if(tmysql4 = nil) then
+	print("[Vermilion2] Failed to initialize TMYSQL4!")
+end
 
 if(SERVER) then
 	AddCSLuaFile()
@@ -67,6 +70,9 @@ if(SERVER) then
 end
 if(not file.Exists("vermilion2/", "DATA")) then
 	file.CreateDir("vermilion2")
+end
+if(not file.Exists("vermilion2sqlof/", "DATA")) then
+	file.CreateDir("vermilion2sqlof")
 end
 
 Vermilion = {}
@@ -137,7 +143,8 @@ Vermilion.Event = {
 	["RankRenamed"] = "Vermilion2_RankRename",
 	["ShuttingDown"] = "Vermilion2_Shutdown",
 	["PlayerChangeRank"] = "Vermilion2_PlayerRankChange",
-	["AnythingSpawned"] = "Vermilion2_AnythingSpawned"
+	["AnythingSpawned"] = "Vermilion2_AnythingSpawned",
+	["SQLConnectStatus"] = "Vermilion2_SQLConnectStatus"
 }
 
 function Vermilion.Log( str, forceside )
