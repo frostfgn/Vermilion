@@ -18,3 +18,4 @@
 ]]
 
 -- Not implemented yet
+-- i don't think a wrapper will be needed if we are using tmysql.. 
